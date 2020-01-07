@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Main Page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+    /* Make the image fully responsive */
+    .carousel-inner {
+      display: flex;
+      position: relative;
+      background-color: #000333
+    }
+
+    .carousel-inner .carousel-item {
+      height: 20rem;
+      width: 12rem;
+      position: relative;
+      z-index: 1;
+      -webkit-transform: scale(0.6) translateY(-2rem);
+      transform: scale(0.6) translateY(-2rem);
+      opacity: 0;
+      cursor: pointer;
+      pointer-events: none;
+      background: #2e5266;
+      background: linear-gradient(to top, #2e5266, #6e8898);
+      transition: 1s;
+    }
+
+    .carousel-inner .carousel-item:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      border-radius: 100%;
+      background-color: rgba(0,0,0,0.3);
+      bottom: -5rem;
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+    }
+
+    .carousel-inner .carousel-item.active {
+      z-index: 3;
+      -webkit-transform: scale(1) translateY(0) translateX(0);
+      transform: scale(1) translateY(0) translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+      transition: 1s;
+    }
+
+    .carousel-inner .carousel-item.next, .carousel-inner .carousel-item.prev {
+      z-index: 2;
+      -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+      transform: scale(0.8) translateY(-1rem) translateX(0);
+      opacity: 0.6;
+      pointer-events: auto;
+      transition: 1s;
+    }
+
+
+/* Smooth-Card-Carousel-jQuery-CSS3 */
+
+html body .heading h1 { margin-bottom: 0; }
+
+html body .heading h6 { margin: 0; }
+
+html body .heading p { margin: 0; }
+
+html body .heading a {
+  color: #2e5266;
+  display: inline-block;
+}
+
+html body .heading a .fab {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-carousel .my-card {
+  height: 20rem;
+  width: 12rem;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(0.6) translateY(-2rem);
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  background: #2e5266;
+  background: linear-gradient(to top, #2e5266, #6e8898);
+  transition: 1s;
+}
+
+.card-carousel .my-card:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0,0,0,0.3);
+  bottom: -5rem;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.card-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-carousel .my-card {
+  height: 20rem;
+  width: 12rem;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(0.6) translateY(-2rem);
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  background: #2e5266;
+  background: linear-gradient(to top, #2e5266, #6e8898);
+  transition: 1s;
+}
+
+.card-carousel .my-card:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0,0,0,0.3);
+  bottom: -5rem;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.card-carousel .my-card:nth-child(0):before {
+  content: '0';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(1):before {
+  content: '1';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(2):before {
+  content: '2';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(3):before {
+  content: '3';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(4):before {
+  content: '4';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(5):before {
+  content: '5';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(6):before {
+  content: '6';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(7):before {
+  content: '7';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(8):before {
+  content: '8';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(9):before {
+  content: '9';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card.active {
+  z-index: 3;
+  -webkit-transform: scale(1) translateY(0) translateX(0);
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+.card-carousel .my-card.prev, .card-carousel .my-card.next {
+  z-index: 2;
+  -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+</style>
+
+</head>
+
+<body>
+  <!-- Nav Menu Left -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <!-- Links -->
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Menu 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Menu 2</a>
+        </li>
+      </ul>
+    </div>
+    <!--Nav Menu Left -->
+
+    <!--Nav Menu Right -->
+    <!-- Dropdown -->
+    <ul class="navbar-nav ml-md-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Log in
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Log in</a>
+          <a class="dropdown-item" href="#">Register</a>
+        </div>
+      </li>
+    </ul>
+    <!--Nav Menu Right -->
+  </nav>
+
+  <!-- Video Panel -->
+  <div class="py-5 text-center text-white" style="position: relative; overflow: hidden;"> <video autoplay="" loop="" muted="" plays-inline="" style="position: absolute; right: 0; top: 0; min-width:100%; z-index: -100;">
+      <source src="https://static.pingendo.com/video-placeholder.mp4" type="video/mp4"> </video>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h1 class="mb-4 display-3">Video</h1>
+          <p class="lead mb-5">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the
+            bliss of souls like mine.</p>
+          <a href="#" class="btn btn-lg btn-primary mx-1">Your call to action</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Video Panel-->
+
+  <!-- Carousel(Image Slider) -->
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner" style="">
+      <div class="carousel-item active">
+        <!-- Card -->
+        <div class="card">
+          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+      <!-- Card -->
+      <div class="carousel-item">
+        <div class="card">
+          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card -->
+
+      <!-- Card -->
+      <div class="carousel-item">
+        <div class="card">
+          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <!-- Carousel(Image Slider) -->
+  
+
+  <div id="jquery-script-menu">
+  <div class="jquery-script-center">
+  <div class="jquery-script-ads"><script type="text/javascript"><!--
+  google_ad_client = "ca-pub-2783044520727903";
+  /* jQuery_demo */
+  google_ad_slot = "2780937993";
+  google_ad_width = 728;
+  google_ad_height = 90;
+  //-->
+  </script>
+  <script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script></div>
+  <div class="jquery-script-clear"></div>
+  </div>
+  </div>
+  <div class="card-carousel">
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+    <div class="my-card"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+
+  <script>
+    $num = $('.my-card').length;
+    $even = $num / 2;
+    $odd = ($num + 1) / 2;
+
+    if ($num % 2 == 0) {
+      $('.my-card:nth-child(' + $even + ')').addClass('active');
+      $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+      $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+    } else {
+      $('.my-card:nth-child(' + $odd + ')').addClass('active');
+      $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+      $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+    }
+
+    $('.my-card').click(function() {
+    $slide = $('.active').width();
+    console.log($('.active').position().left);
+  
+    if ($(this).hasClass('next')) {
+      $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+    } else if ($(this).hasClass('prev')) {
+      $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+    }
+  
+    $(this).removeClass('prev next');
+    $(this).siblings().removeClass('prev active next');
+  
+    $(this).addClass('active');
+    $(this).prev().addClass('prev');
+    $(this).next().addClass('next');
+  });
+
+
+  // Keyboard nav
+  $('html body').keydown(function(e) {
+    if (e.keyCode == 37) { // left
+      $('.active').prev().trigger('click');
+    }
+    else if (e.keyCode == 39) { // right
+      $('.active').next().trigger('click');
+    }
+  });
+  </script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+
+
+</body>
+
+</html>
